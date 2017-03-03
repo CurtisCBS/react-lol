@@ -1,0 +1,14 @@
+html, body, div, h5, h6, p, ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+#app {
+    background: #09a;
+    padding: 50px;
+    .title {
+        font-size: 25px;
+        text-align: center;
+        transform: scale(0.8);
+    }
+}
