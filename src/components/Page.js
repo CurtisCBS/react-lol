@@ -10,7 +10,7 @@ class Page extends Component {
     };
   }
   componentDidMount(){
-    this.postRequest("十四行诗")
+    this.postRequest("14行诗")
   }
 
   render(){

@@ -6,7 +6,14 @@ class BattleList extends Component {
   }
 
   render(){
-    let list = [];
+    let list = [],
+    titleStyle = {
+      borderBottom:"1px solid #bdb088",
+      fontSize:"25px",
+      letterSpacing: "8px",
+      padding:"10px",
+      textAlign:"center"
+    };
     this.props.data.map((item,index)=>{
       list.push(
         <Battle data={item} key={index}></Battle>
@@ -14,6 +21,7 @@ class BattleList extends Component {
     })
     return (
       <div>
+        <div style={titleStyle}>近期战绩</div>
         {list}
       </div>
     )
