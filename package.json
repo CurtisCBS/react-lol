@@ -32,6 +32,7 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
+    "file-loader": "^0.10.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1"
   }
