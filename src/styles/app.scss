@@ -5,6 +5,16 @@ html, body, div, h5, h6, p, ul, li {
     color: #bdb088;
 }
 
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.clearfix { display: inline-block; }
+
 #app {
   .map-background{
     // width: 100%;
@@ -16,6 +26,7 @@ html, body, div, h5, h6, p, ul, li {
     //   left: 0;
     // }
   }
+  svg { fill: #bdb088; }
 }
 
 // @-webkit-keyframes mapmove{

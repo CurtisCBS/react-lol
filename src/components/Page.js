@@ -9,6 +9,9 @@ class Page extends Component {
       list:null
     };
   }
+  componentDidMount(){
+    this.postRequest("十四行诗")
+  }
 
   render(){
     let boxStyle = {
@@ -51,16 +54,20 @@ class Page extends Component {
     if(event.keyCode === 13){ //enter binding
           let value = event.target.value;
           if(!value) return false;
-          this.fetchHelper({
-            url:"/search/"+value,
-            success:res=>{
-              this.setState({
-                showList : true,
-                list : res.player_list
-              })
-            }
-          })
+          this.postRequest(value);
       }
+  }
+
+  postRequest(name){
+    this.fetchHelper({
+      url:"/search/"+name,
+      success:res=>{
+        this.setState({
+          showList : true,
+          list : res.player_list
+        })
+      }
+    })
   }
 
   fetchHelper(opt){
