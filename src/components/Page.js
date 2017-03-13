@@ -51,7 +51,6 @@ class Page extends Component {
     if(event.keyCode === 13){ //enter binding
           let value = event.target.value;
           if(!value) return false;
-          alert('enter');
           this.fetchHelper({
             url:"/search/"+value,
             success:res=>{
