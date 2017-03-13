@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BattleList from './BattleList';
 class DetailPage extends Component {
   constructor(props) {
     super(props);
@@ -9,11 +10,16 @@ class DetailPage extends Component {
   }
 
   render(){
-    return (
-      <div>
-        render page
+    let content;
+    if(this.state.userData && this.state.userData.player_list && this.state.userData.player_list[0]){
+      content = <BattleList data={this.state.userData.player_list[0].game_recent_list}></BattleList>
+    }
+    else{
+      content = <div>
+        查无此人
       </div>
-    )
+    }
+    return content;
   }
 
   getUserData(){
@@ -22,7 +28,9 @@ class DetailPage extends Component {
     this.fetchHelper({
       url:"/user/detail/"+zoneId+"/"+userId,
       success:res =>{
-        console.log(res);
+        this.setState({
+          userData:res
+        })
       }
     })
   }
