@@ -9,9 +9,6 @@ class Page extends Component {
       list:null
     };
   }
-  componentDidMount(){
-    this.postRequest("14行诗")
-  }
 
   render(){
     let boxStyle = {

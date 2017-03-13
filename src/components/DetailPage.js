@@ -11,7 +11,7 @@ class DetailPage extends Component {
 
   render(){
     let content;
-    if(this.state.userData && this.state.userData.player_list && this.state.userData.player_list[0]){
+    if(this.state.userData && this.state.userData.player_list && this.state.userData.player_list.length){
       content = <BattleList data={this.state.userData.player_list[0].game_recent_list}></BattleList>
     }
     else{
