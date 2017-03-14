@@ -34,6 +34,7 @@
   "dependencies": {
     "file-loader": "^0.10.1",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-fastclick": "^3.0.1"
   }
 }

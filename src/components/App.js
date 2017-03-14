@@ -6,6 +6,9 @@ import { Router, Route, hashHistory } from 'react-router';
 import { bounce } from 'react-animations';
 import Page from './Page';
 import DetailPage from './DetailPage';
+import initReactFastclick from 'react-fastclick';
+initReactFastclick();
+
 
 let App = React.createClass({
     render:function(){
