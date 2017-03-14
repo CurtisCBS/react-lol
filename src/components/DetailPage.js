@@ -5,18 +5,24 @@ class DetailPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userData : null
+      userData : null,
+      battleList:null
     };
     this.getUserData();
+    this.getBattleList();
   }
 
   render(){
-    let content;
-    if(this.state.userData && this.state.userData.player_list && this.state.userData.player_list.length){
-      content = <BattleList data={this.state.userData.player_list[0].game_recent_list}></BattleList>
+    let content,
+      loadingStyle ={
+        textAlign:"center",
+        paddingTop:"200px"
+      };
+    if(this.state.battleList && this.state.battleList[0]){
+      content = <BattleList data={this.state.battleList}></BattleList>
     }
     else{
-      content = <div>
+      content = <div style={loadingStyle}>
         加载中...
       </div>
     }
@@ -29,9 +35,9 @@ class DetailPage extends Component {
     this.fetchHelper({
       url:"/user/detail/"+zoneId+"/"+userId,
       success:res =>{
-        this.setState({
+        this.setState(Object.assign({},this.state,{
           userData:res
-        })
+        }))
       }
     })
   }
@@ -40,6 +46,18 @@ class DetailPage extends Component {
     axios.get(httpProxy.proxy+opt.url)
           .then(res => {
             opt.success && opt.success(res.data);
+          });
+  }
+
+  getBattleList(){
+    let zoneId = this.props.params.zoneId,
+        userId = this.props.params.userId;
+    let url = "/battle/list/"+zoneId+"/"+userId
+    axios.get(httpProxy.proxy+url)
+          .then(res => {
+            this.setState(Object.assign({},this.state,{
+              battleList:res.data.game_list
+            }))
           });
   }
 }

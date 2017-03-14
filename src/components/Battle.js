@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 class Battle extends Component {
   constructor(props) {
     super(props);
@@ -36,27 +37,45 @@ class Battle extends Component {
           padding:"0 5px",
           borderRadius:"5px"
         },
+        winStyle={
+          color:"#00cc99"
+        },
+        defStyle={
+          color:"#cc0033"
+        },
+        result,
         mvp;
         if(data.flag_mvp_carry){
           mvp = <span style={mvpStyle}>MVP</span>
         }
+        if(data.battle_result){
+          result = <span style={winStyle}>胜利</span>
+        }
+        else{
+          result = <span style={defStyle}>失败</span>
+        }
+        let route = {
+          pathname : "/battle/"+data.game_zone.pinyin+"/"+data.user_id+"/"+data.game_id
+        };
         data.created = this.formatTimeStr(data.created);
     return (
-      <div style={boxStyle} className="clearfix">
-        <div style={heroStyle}>
-          <img style={imgStyle} src={require("../heroes/"+data.champion.name+".png")} />
+      <Link to={route}>
+        <div style={boxStyle} className="clearfix">
+          <div style={heroStyle}>
+            <img style={imgStyle} src={require("../heroes/"+data.champion.name+".png")} />
+          </div>
+          <div style={infoStyle}>
+            {data.champion.display_name}-{data.champion.title} {mvp}
+             <br/>
+            {data.created}
+             <br/>
+            {data.game_type.name_cn}
+             <br/>
+             {result}
+             <br/>
+          </div>
         </div>
-        <div style={infoStyle}>
-          {data.champion.display_name}-{data.champion.title} {mvp}
-           <br/>
-          {data.created}
-           <br/>
-          {data.game_type.name_cn}
-           <br/>
-          {data.battle_result ? '胜利' : '失败'}
-           <br/>
-        </div>
-      </div>
+      </Link>
     )
   }
 

@@ -6,6 +6,7 @@ import { Router, Route, hashHistory } from 'react-router';
 import { bounce } from 'react-animations';
 import Page from './Page';
 import DetailPage from './DetailPage';
+import BattleDetail from './BattleDetail';
 import initReactFastclick from 'react-fastclick';
 initReactFastclick();
 
@@ -22,5 +23,6 @@ ReactDom.render((
     <Router history={hashHistory}>
       <Route path='/' component={App}></Route>
       <Route path='/detail/:zoneId/:userId' component={DetailPage}></Route>
+      <Route path='/battle/:zoneId/:userId/:battleId' component={BattleDetail}></Route>
     </Router>
 ), document.getElementById('app'));

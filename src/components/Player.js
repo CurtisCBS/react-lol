@@ -7,6 +7,7 @@ class ReactComponent extends Component {
   render(){
     return (
       <div>
+        {this.props.data.player.pn}
       </div>
     )
   }
