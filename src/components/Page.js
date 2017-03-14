@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import MapBackground from './MapBackground';
+import axios from 'axios';
 import List from "./SummonerList";
 class Page extends Component {
   constructor(props) {
@@ -102,16 +103,10 @@ class Page extends Component {
 
   fetchHelper(opt){
     let httpProxy = "http://0.0.0.0:5000";
-    if(fetch){
-      fetch(httpProxy+opt.url).then(res=>{
-        res.json().then(jsonData =>{
-          opt.success && opt.success(jsonData);
-        })
-      })
-    }
-    else{
-      //兼容处理
-    }
+    axios.get(httpProxy+opt.url)
+          .then(res => {
+            opt.success && opt.success(res.data);
+          });
   }
 }
 export default Page;

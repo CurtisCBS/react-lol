@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import BattleList from './BattleList';
+import axios from 'axios';
+
 class DetailPage extends Component {
   constructor(props) {
     super(props);
@@ -37,16 +39,10 @@ class DetailPage extends Component {
 
   fetchHelper(opt){
     let httpProxy = "http://0.0.0.0:5000";
-    if(fetch){
-      fetch(httpProxy+opt.url).then(res=>{
-        res.json().then(jsonData =>{
-          opt.success && opt.success(jsonData);
-        })
-      })
-    }
-    else{
-      //兼容处理
-    }
+    axios.get(httpProxy+opt.url)
+          .then(res => {
+            opt.success && opt.success(res.data);
+          });
   }
 }
 
