@@ -16,7 +16,8 @@ class Page extends Component {
       width:"100%",
       height:window.screen.height,
       overflow:"hidden",
-      backgroundImage: 'url('+require("../images/bg.jpg")+')'
+      backgroundImage:"url('http://lol.qq.com/act/export/artbook/content/summoners_rift/00_intro/sr_01.jpg')"
+      // backgroundImage: 'url('+require("../images/bg.jpg")+')'
     },
     listStyle={
       width:"100%",
