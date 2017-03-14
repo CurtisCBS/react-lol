@@ -1,8 +1,10 @@
 html, body, div, h5, h6, p, ul, li {
     margin: 0px;
     padding: 0px;
-    background-color: #1c2229;
     color: #bdb088;
+}
+html, body{
+  background-color: #1c2229;
 }
 
 .clearfix:after {
@@ -26,6 +28,10 @@ html, body, div, h5, h6, p, ul, li {
     //   left: 0;
     // }
   }
+  .bg-container{
+      animation: backgroundmove 50s 1 ease alternate;
+      animation-fill-mode: forwards;
+  }
   svg { fill: #bdb088; }
 }
 
@@ -47,3 +53,12 @@ html, body, div, h5, h6, p, ul, li {
   //   margin-top:0%;
   // }
 // }
+
+@-webkit-keyframes backgroundmove{
+  from {
+    background-position: left top;
+  }
+  100% {
+    background-position: right top;
+  }
+}
