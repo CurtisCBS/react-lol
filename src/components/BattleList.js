@@ -9,9 +9,9 @@ class BattleList extends Component {
     let list = [],
     titleStyle = {
       borderBottom:"1px solid #bdb088",
-      fontSize:"25px",
+      fontSize:"20px",
       letterSpacing: "8px",
-      padding:"10px",
+      padding:"8px",
       textAlign:"center"
     };
     this.props.data.map((item,index)=>{

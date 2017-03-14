@@ -11,20 +11,28 @@ class BattleDetail extends Component {
   }
 
   render(){
-    let players;
+    let winArr = [],loseArr= [],
+    titleStyle={
+      borderBottom:"1px solid #bdb088",
+      fontSize:"20px",
+      letterSpacing: "8px",
+      padding:"8px 0",
+      textAlign:"center"
+    };
     if(this.state.winList && this.state.loseList){
-        players = [];
         this.state.winList.map((player,index)=>{
-          players.push(<Player data={player} key={player.player.user_id}></Player>)
+          winArr.push(<Player data={player} key={player.player.user_id}></Player>)
         })
         this.state.loseList.map((player,index)=>{
-          players.push(<Player data={player} key={player.player.user_id}></Player>)
+          loseArr.push(<Player data={player} key={player.player.user_id}></Player>)
         })
-        console.log(players);
     }
     return (
       <div>
-        {players}
+        <div style={titleStyle}>胜利队伍</div>
+        {winArr}
+        <div style={titleStyle}>失败队伍</div>
+        {loseArr}
       </div>
     )
   }
