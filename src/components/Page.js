@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 // import MapBackground from './MapBackground';
-import axios from 'axios';
 import List from "./SummonerList";
 class Page extends Component {
   constructor(props) {

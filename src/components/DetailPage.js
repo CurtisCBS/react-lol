@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BattleList from './BattleList';
-import axios from 'axios';
 
 class DetailPage extends Component {
   constructor(props) {

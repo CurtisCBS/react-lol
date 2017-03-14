@@ -18,6 +18,16 @@ html, body{
 }
 .clearfix { display: inline-block; }
 
+.global-loading{
+  background-color: transparent;
+  position: fixed;
+  top:30%;
+  left:0%;
+  width:100%;
+  text-align: center;
+  z-index: 10;
+  display: none;
+}
 #app {
   .map-background{
     // width: 100%;
