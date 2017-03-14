@@ -16,7 +16,9 @@ class Page extends Component {
       width:"100%",
       height:window.screen.height,
       overflow:"hidden",
-      backgroundImage:"url('http://lol.qq.com/act/export/artbook/content/summoners_rift/00_intro/sr_01.jpg')"
+      position:"relative"
+      // ,
+      // backgroundImage:"url('http://lol.qq.com/act/export/artbook/content/summoners_rift/00_intro/sr_01.jpg')"
       // backgroundImage: 'url('+require("../images/bg.jpg")+')'
     },
     listStyle={
@@ -25,12 +27,20 @@ class Page extends Component {
       overflow:"hidden"
     },
     inputBoxStyle = {
-      width:"100%",
-      position:"relative",
-      marginTop:"200px"
+      width:"100%"
     },
     wrapStyle = {
-      padding:"0 20px"
+      padding:"40px 20px"
+    },
+    logo = {
+      width:"80%",
+      height:"150px",
+      backgroundRepeat:"no-repeat",
+      backgroundPosition:"center",
+      backgroundSize:"100%",
+      maxWidth:"200px",
+      margin:"35px auto 0",
+      backgroundImage: 'url('+require("../images/logo.png")+')'
     },
     inputStyle = {
       fontSize:"18px",
@@ -47,13 +57,28 @@ class Page extends Component {
     buttonStyle = {
       float:"left",
       width:"20%",
-      marginLeft:"-20px",
+      marginLeft:"-22px",
       backgroundColor:"#1c2229",
-      height:"42px",
+      height:"39px",
       lineHeight:"42px",
       textAlign:"center",
-      cursor:"pointer"
-    },content;
+      cursor:"pointer",
+      border:"1px solid #bdb088"
+    },
+    svgBoxStyle = {
+        width:"70%",
+        position:"absolute",
+        bottom:"15%",
+        left:"15%",
+        margin:"0 auto"
+    },
+    carrierStyle = {
+      width:"16%",
+      margin:"0 2%",
+      display:"block",
+      float:"left"
+    },
+    content;
     if(this.state.showList){
       content = <div style={listStyle}>
           <List data={this.state.list}></List>
@@ -62,9 +87,27 @@ class Page extends Component {
     else{
       content = <div style={boxStyle} className="bg-container">
         <div style={inputBoxStyle}>
+          <div style={logo}></div>
           <div style={wrapStyle}>
             <input value={this.state.inputValue} onChange={this.handleChange.bind(this)}  onKeyUp={this.handlerKeyUp.bind(this)} style={inputStyle} type="text" placeholder="请输入游戏角色昵称"/>
             <div style={buttonStyle} onClick={this.handlerClick.bind(this)} >搜索</div>
+          </div>
+          <div style={svgBoxStyle}>
+            <div style={carrierStyle} >
+              <embed src={require("../images/fighter.svg")} type="image/svg+xml" />
+            </div>
+            <div style={carrierStyle} >
+              <embed src={require("../images/tank.svg")}  type="image/svg+xml" />
+            </div>
+            <div style={carrierStyle} >
+              <embed src={require("../images/assassin.svg")}  type="image/svg+xml" />
+            </div>
+            <div style={carrierStyle} >
+              <embed src={require("../images/marksman.svg")} type="image/svg+xml" />
+            </div>
+            <div style={carrierStyle} >
+              <embed src={require("../images/support.svg")} type="image/svg+xml" />
+            </div>
           </div>
         </div>
       </div>
