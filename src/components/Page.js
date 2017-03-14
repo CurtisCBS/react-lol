@@ -15,6 +15,12 @@ class Page extends Component {
     let boxStyle = {
       width:"100%",
       height:window.screen.height,
+      overflow:"hidden",
+      backgroundImage: 'url('+require("../images/bg.jpg")+')'
+    },
+    listStyle={
+      width:"100%",
+      height:window.screen.height,
       overflow:"hidden"
     },
     inputBoxStyle = {
@@ -47,7 +53,7 @@ class Page extends Component {
       textAlign:"center"
     },content;
     if(this.state.showList){
-      content = <div style={boxStyle}>
+      content = <div style={listStyle}>
           <List data={this.state.list}></List>
         </div>
     }
