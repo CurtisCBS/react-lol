@@ -18,7 +18,7 @@ class DetailPage extends Component {
     }
     else{
       content = <div>
-        查无此人
+        加载中...
       </div>
     }
     return content;
