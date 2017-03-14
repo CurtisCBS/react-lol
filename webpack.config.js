@@ -3,6 +3,8 @@
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打包
 var globalPlugins = require('./global.js');
+let webpack = require('webpack');
+
 module.exports = {
     devtool: 'eval-source-map',
 
@@ -36,6 +38,12 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin('main.css'),
+        new webpack.optimize.CommonsChunkPlugin('vendor',  'vendor.js'),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        }),
         globalPlugins
     ]
 
