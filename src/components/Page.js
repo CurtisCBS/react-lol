@@ -21,7 +21,7 @@ class Page extends Component {
     },
     listStyle={
       width:"100%",
-      height:window.screen.height,
+      // height:window.screen.height,
       overflow:"hidden"
     },
     inputBoxStyle = {
