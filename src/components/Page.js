@@ -50,7 +50,8 @@ class Page extends Component {
       backgroundColor:"#1c2229",
       height:"42px",
       lineHeight:"42px",
-      textAlign:"center"
+      textAlign:"center",
+      cursor:"pointer"
     },content;
     if(this.state.showList){
       content = <div style={listStyle}>
