@@ -5,10 +5,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打�
 var globalPlugins = require('./global.js');
 let webpack = require('webpack');
 
-module.exports = {
-    devtool: 'eval-source-map',
+let config = {
 
-    entry: __dirname + '/src/entry.js', //唯一入口文件
+    entry: {
+       bundle: __dirname + '/src/entry.js',
+       vendor: ['react']
+    },
     output: {
         path: __dirname + '/build', //打包后的文件存放的地方
         publicPath: process.env.NODE_ENV == "production" ? 'build/' :'/build/',
@@ -48,3 +50,9 @@ module.exports = {
     ]
 
 }
+
+if(process.env.NODE_ENV != "production" ){
+  config.devtool = 'eval-source-map';
+}
+
+module.exports = config;
