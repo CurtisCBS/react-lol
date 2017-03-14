@@ -102,8 +102,7 @@ class Page extends Component {
   }
 
   fetchHelper(opt){
-    let httpProxy = "http://0.0.0.0:5000";
-    axios.get(httpProxy+opt.url)
+    axios.get(httpProxy.proxy+opt.url)
           .then(res => {
             opt.success && opt.success(res.data);
           });

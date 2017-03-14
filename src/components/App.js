@@ -9,7 +9,6 @@ import DetailPage from './DetailPage';
 import initReactFastclick from 'react-fastclick';
 initReactFastclick();
 
-
 let App = React.createClass({
     render:function(){
       return (

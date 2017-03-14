@@ -2,7 +2,7 @@
 'use strict';
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打包
-
+var globalPlugins = require('./global.js');
 module.exports = {
     devtool: 'eval-source-map',
 
@@ -36,6 +36,7 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin('main.css'),
+        globalPlugins
     ]
 
 }
