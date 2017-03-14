@@ -57,13 +57,13 @@ class Page extends Component {
     buttonStyle = {
       float:"left",
       width:"20%",
-      marginLeft:"-22px",
+      marginLeft:"-23px",
       backgroundColor:"#1c2229",
-      height:"39px",
-      lineHeight:"42px",
+      height:"40px",
+      lineHeight:"40px",
       textAlign:"center",
       cursor:"pointer",
-      border:"1px solid #bdb088"
+      border:"1.5px solid #bdb088"
     },
     svgBoxStyle = {
         width:"70%",
