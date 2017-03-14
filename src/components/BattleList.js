@@ -9,7 +9,7 @@ class BattleList extends Component {
     let list = [],
     titleStyle = {
       borderBottom:"1px solid #bdb088",
-      fontSize:"20px",
+      fontSize:"18px",
       letterSpacing: "8px",
       padding:"8px",
       textAlign:"center"

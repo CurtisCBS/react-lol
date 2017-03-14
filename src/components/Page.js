@@ -96,6 +96,10 @@ class Page extends Component {
           showList : true,
           list : res.player_list
         })
+        console.log(res.player_list);
+        res.player_list.map(player=>{
+          localStorage.setItem(player.user_id+"_"+player.game_zone.area_id, player.url_img);
+        })
       }
     })
   }

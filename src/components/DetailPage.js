@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BattleList from './BattleList';
-
+import Profile from './Profile';
 class DetailPage extends Component {
   constructor(props) {
     super(props);
@@ -13,20 +13,29 @@ class DetailPage extends Component {
   }
 
   render(){
-    let content,
+    let list,
+      info,
       loadingStyle ={
         textAlign:"center",
         paddingTop:"200px"
       };
     if(this.state.battleList && this.state.battleList[0]){
-      content = <BattleList data={this.state.battleList}></BattleList>
+      list = <BattleList data={this.state.battleList}></BattleList>
     }
     else{
-      content = <div style={loadingStyle}>
+      list = <div style={loadingStyle}>
         加载中...
       </div>
     }
-    return content;
+    if(this.state.userData && this.state.userData.player_list[0]){
+      info = <Profile data={this.state.userData.player_list[0]}></Profile>
+    }
+    return (
+      <div>
+        {info}
+        {list}
+      </div>
+    );
   }
 
   getUserData(){

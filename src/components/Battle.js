@@ -10,10 +10,9 @@ class Battle extends Component {
     let data = this.props.data,
         boxStyle = {
           borderBottom:"1px solid #bdb088",
-          height:"100px",
           width:"100%",
           overflow:"hidden",
-          paddingTop:"5px"
+          padding:"5px 0"
         },
         heroStyle={
           display:"block",
@@ -27,7 +26,9 @@ class Battle extends Component {
         infoStyle={
           display:"block",
           width:"80%",
-          float:"left"
+          float:"left",
+          fontSize:"14px",
+          position:"relative"
         },
         mvpStyle={
           color:"#ffffff",
@@ -38,10 +39,18 @@ class Battle extends Component {
           borderRadius:"5px"
         },
         winStyle={
-          color:"#00cc99"
+          color:"#00cc99",
+          position:"absolute",
+          right:"10px",
+          top:"10px",
+          fontSize:"16px"
         },
         defStyle={
-          color:"#cc0033"
+          color:"#cc0033",
+          position:"absolute",
+          right:"10px",
+          top:"10px",
+          fontSize:"16px"
         },
         result,
         mvp;
@@ -70,9 +79,7 @@ class Battle extends Component {
             {data.created}
              <br/>
             {data.game_type.name_cn}
-             <br/>
              {result}
-             <br/>
           </div>
         </div>
       </Link>
