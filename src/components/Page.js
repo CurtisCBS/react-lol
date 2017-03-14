@@ -14,12 +14,6 @@ class Page extends Component {
   render(){
     let boxStyle = {
       width:"100%",
-      backgroundImage:"url("+ require('../images/bg.jpg')+")",
-      height:window.screen.height,
-      overflow:"hidden"
-    },
-    listBoxStyle = {
-      width:"100%",
       height:window.screen.height,
       overflow:"hidden"
     },
@@ -53,7 +47,7 @@ class Page extends Component {
       textAlign:"center"
     },content;
     if(this.state.showList){
-      content = <div style={listBoxStyle}>
+      content = <div style={boxStyle}>
           <List data={this.state.list}></List>
         </div>
     }

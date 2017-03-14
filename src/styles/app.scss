@@ -31,6 +31,7 @@ html, body{
   .bg-container{
       animation: backgroundmove 50s 1 ease alternate;
       animation-fill-mode: forwards;
+      background-image: url('../images/bg.jpg');
   }
   svg { fill: #bdb088; }
 }
