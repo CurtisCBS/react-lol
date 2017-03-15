@@ -10,11 +10,14 @@
 ## 功能截图
 
 ### 搜索页面
-![搜索页面](./about/imgs/search.PNG)
-### 搜索结果页面
-![搜索结果](./about/imgs/search_list.PNG)
-### 最近战绩页面
-![最近战绩页面](./about/imgs/recent_battle.PNG)
+<div>
+	<img src="./about/imgs/search.PNG" width="24%" style="display:inline-block;" alt="搜索页面"/>
+	
+	<img src="./about/imgs/search_list.PNG" width="24%"  style="display:inline-block;" alt="搜索结果页面"/>
+	
+	<img src="./about/imgs/recent_battle.PNG" width="24%"  style="display:inline-block;" alt="最近战绩页面"/>
+	<img src="./about/imgs/detail.png" width="24%"  style="display:inline-block;" alt="战绩详情"/>
+</div>
 
 ## 技术基础
 
@@ -42,7 +45,7 @@
 
 ## 后续功能
 
-* 战绩具体信息展示
+* 战绩具体信息展示(实现,未完成)
 * 排位信息展示
 
 ## 后续优化
