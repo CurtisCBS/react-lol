@@ -11,12 +11,16 @@
 
 ### 搜索页面
 <div>
-	<img src="./about/imgs/search.PNG" width="24%" style="display:inline-block;" alt="搜索页面"/>
+
+<img src="./about/imgs/search.PNG" width="24%" style="display:inline-block;" alt="搜索页面"/>
 	
-	<img src="./about/imgs/search_list.PNG" width="24%"  style="display:inline-block;" alt="搜索结果页面"/>
+<img src="./about/imgs/search_list.PNG" width="24%"  style="display:inline-block;" alt="搜索结果页面"/>
 	
-	<img src="./about/imgs/recent_battle.PNG" width="24%"  style="display:inline-block;" alt="最近战绩页面"/>
-	<img src="./about/imgs/detail.png" width="24%"  style="display:inline-block;" alt="战绩详情"/>
+<img src="./about/imgs/recent_battle.PNG" width="24%"  style="display:inline-block;" alt="最近战绩页面"/>
+
+<img src="./about/imgs/detail.png" width="24%"  
+style="display:inline-block;" alt="战绩详情"/>
+
 </div>
 
 ## 技术基础
