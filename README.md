@@ -3,7 +3,7 @@
 ## 简介
 ### 项目原地址([https://github.com/CurtisCBS/learn-react](https://github.com/CurtisCBS/learn-react))欢迎star ⭐️
 
-### [👉查询我的战绩(demo)](http://sucks.life)
+### [👉查询我的战绩(节点1)](http://sucks.life) [查询我的战绩(节点2)](http://xurtis.com/lol/)
 
 上周(17.3.9)看了两天新技术(react,python),顺手搞个项目看看,项目实现国服lol战绩查询
 
@@ -13,15 +13,23 @@
 <div>
 
 <img src="./about/imgs/search.PNG" width="24%" style="display:inline-block;" alt="搜索页面"/>
-	
+
 <img src="./about/imgs/search_list.PNG" width="24%"  style="display:inline-block;" alt="搜索结果页面"/>
-	
+
 <img src="./about/imgs/recent_battle.PNG" width="24%"  style="display:inline-block;" alt="最近战绩页面"/>
 
 <img src="./about/imgs/detail.PNG" width="24%"  
 style="display:inline-block;" alt="战绩详情"/>
 
 </div>
+
+## 使用
+
+		git clone https://github.com/CurtisCBS/react-lol.git
+
+		npm run dev
+
+		visit localhost:8888
 
 ## 技术基础
 
