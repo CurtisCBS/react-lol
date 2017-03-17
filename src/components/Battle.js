@@ -67,11 +67,12 @@ class Battle extends Component {
           pathname : "/battle/"+data.game_zone.pinyin+"/"+data.user_id+"/"+data.game_id
         };
         data.created = this.formatTimeStr(data.created);
+        let avatar = "http://ossweb-img.qq.com/images/lol/img/champion/"+data.champion.name+".png";
     return (
       <Link to={route}>
         <div style={boxStyle} className="clearfix">
           <div style={heroStyle}>
-            <img style={imgStyle} src={require("../heroes/"+data.champion.name+".png")} />
+            <img style={imgStyle} src={avatar} />
           </div>
           <div style={infoStyle}>
             {data.champion.display_name}-{data.champion.title} {mvp}

@@ -73,11 +73,11 @@ class ReactComponent extends Component {
             );
           }
         });
-        //
+        let avatarUrl = "http://ossweb-img.qq.com/images/lol/img/champion/"+data.champion.name+".png";
     return (
       <div style={boxStyle} className="clearfix">
         <div style={avatarBoxStyle}>
-          <img style={imgStyle} src={require("../heroes/"+data.champion.name+".png")} />
+          <img style={imgStyle} src={avatarUrl} />
         </div>
         <div style={infoStyle}>
           <div style={nameStyle}>
