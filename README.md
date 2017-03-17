@@ -18,7 +18,7 @@
 
 <img src="./about/imgs/recent_battle.PNG" width="24%"  style="display:inline-block;" alt="最近战绩页面"/>
 
-<img src="./about/imgs/detail.PNG" width="24%"  
+<img src="./about/imgs/detail.jpeg" width="24%"  
 style="display:inline-block;" alt="战绩详情"/>
 
 </div>
