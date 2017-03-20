@@ -6,7 +6,7 @@ class Profile extends Component {
 
   render(){
     let data = this.props.data,
-        avatarUrl = localStorage.getItem(data.user_id+"_"+data.game_zone.area_id)?localStorage.getItem(data.user_id+"_"+data.game_zone.area_id) : "",
+        avatarUrl = "http://static.lolbox.duowan.com/images/profile_icons/"+data.icon+".jpg",
         profileBoxStyle={
           backgroundImage: 'url('+require("../images/jinx.jpg")+')',
           padding:"20px 0 30px",
@@ -35,6 +35,7 @@ class Profile extends Component {
           margin:"0 auto",
           border:"2px solid #bdb088"
         };
+        console.log(data);
     return (
       <div>
         <div style={profileBoxStyle}>

@@ -45,13 +45,25 @@ class Summoner extends Component {
         },
         route = {
           pathname:"/detail/"+summoner.game_zone.pinyin+"/"+summoner.user_id
+        };
+        let RANK_DICT = {
+          0:"无段位",
+          1:"青铜",
+          2:"白银",
+          3:"黄金",
+          4:"铂金",
+          5:"钻石"
+        }
+        let tier = RANK_DICT[0];
+        if(summoner.tier){
+          tier = RANK_DICT[summoner.tier]+''+summoner.rank;
         }
     return (
       <Link to={route}>
         <li style={itemStyle}>
           <div style={wrapStyle} className="clearfix">
             <div style={avatarStyle}>
-              <img src={summoner.url_img}/>
+              <img src={"http://static.lolbox.duowan.com/images/profile_icons/"+summoner.icon+".jpg"}/>
             </div>
             <div style={infoStyle}>
               <div style={nameStyle}>
@@ -60,7 +72,7 @@ class Summoner extends Component {
               <div>
                 等级:{summoner.level}<br/>
                 隐藏分:{summoner.box_score}<br/>
-              段位:{summoner.tier_rank.tier.full_name_cn}{summoner.tier_rank.tier.const} <img style={tierStyle} src={summoner.tier_rank.url_img}/>
+              段位:{tier}
               </div>
             </div>
             <div style={moreStyle}>
