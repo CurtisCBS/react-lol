@@ -3,7 +3,7 @@
 ## 简介
 ### 项目原地址([https://github.com/CurtisCBS/learn-react](https://github.com/CurtisCBS/learn-react))欢迎star ⭐️
 
-### [👉查询我的战绩(节点1)](http://sucks.life) [查询我的战绩(节点2)](http://xurtis.com/lol/)
+### [👉查询我的战绩(节点1)](http://www.sucks.life/#/detail/dx1/4001183243?_k=niit3h) [查询我的战绩(节点2)](http://xurtis.com/lol/#/detail/dx1/4001183243?_k=niit3h)
 
 上周(17.3.9)看了两天新技术(react,python),顺手搞个项目看看,项目实现国服lol战绩查询
 
